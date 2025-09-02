@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - UNI MANAGEMENT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="UNI MANAGEMENT Logo" class="company-logo">
+        </div>
+        <nav>
+            <a href="index.html">Tela inicial</a>
+            <a href="#">Ajuda</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-page-illustration">
+            <!-- Illustration can go here -->
+        </div>
+        <div class="register-container">
+            <div class="register-box">
+                <h2>FAÇA SEU CADASTRO AQUI</h2>
+                <form id="registerForm">
+                    <label for="userId">ID Do Usuário:</label>
+                    <input type="text" id="userId" name="userId" required>
+
+                    <label for="fullName">Nome Completo:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+
+                    <label for="phoneNumber">Número de Celular:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                    <label for="corporateEmail">E-mail Corporativo:</label>
+                    <input type="email" id="corporateEmail" name="corporateEmail" required>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="confirmPassword">Confirmar Senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <div class="form-actions">
+                        <button type="submit" class="register-button">CADASTRAR</button>
+                    </div>
+                </form>
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <span>Telefone</span>
+                <span>(11) 4992-5004</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📧</span>
+                <span>E-Mail</span>
+                <span>unimanagement@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🌐</span>
+                <span>Website</span>
+                <span>www.unimanagement.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🏠</span>
+                <span>Endereço</span>
+                <span>AV.Paulista 1234, 17 andar</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UNI MANAGEMENT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="UNI MANAGEMENT Logo" class="company-logo">
+        </div>
+        <nav>
+            <a href="#">Tela inicial</a>
+            <a href="#">Ajuda</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-page-illustration">
+            <!-- This is where the illustration from the original image would go -->
+            <!-- For simplicity, we are not including the image itself, but you could add an <img> tag here. -->
+            <!-- Example: <img src="illustration.png" alt="Business illustration"> -->
+        </div>
+        <div class="login-container">
+            <div class="login-box">
+                <h2>FAÇA LOGIN NA SUA CONTA</h2>
+                <form id="loginForm">
+                    <label for="username">ID Do Usuário/E-mail Corp:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <div class="form-actions">
+                        <a href="register/register.html">Ainda não tem uma conta? 
+                            <br> cadastre agora!</a>
+                        <button type="submit" class="login-button">LOGIN</button>
+                    </div>
+                </form>
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <span>Telefone</span>
+                <span>(11) 4992-5004</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📧</span>
+                <span>E-Mail</span>
+                <span>unimanagement@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🌐</span>
+                <span>Website</span>
+                <span>www.unimanagement.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🏠</span>
+                <span>Endereço</span>
+                <span>AV.Paulista 1234, 17 andar</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
