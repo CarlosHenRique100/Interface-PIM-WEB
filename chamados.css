@@ -54,32 +54,79 @@ header nav a.login-button:hover {
     margin-bottom: 30px;
 }
 
-.search-problem-box {
-    display: flex;
-    align-items: center;
+.chat-container {
     background-color: #fff;
-    border-radius: 25px;
-    padding: 10px 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 600px;
     max-width: 90%;
+    height: 500px; /* Altura fixa para a caixa de chat */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza o chat horizontalmente */
 }
 
-.search-problem-box input {
+.chat-box {
     flex-grow: 1;
-    border: none;
-    outline: none;
-    padding: 8px 10px;
-    font-size: 16px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.search-problem-box .search-button {
-    background: none;
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.ai-message {
+    background-color: #e2e6ea;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    background-color: #f8f9fa;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.chat-input-area .button {
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 20px;
-    color: #007bff; /* Blue search icon */
-    padding: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input-area .button:hover {
+    background-color: #0056b3;
 }
 
 .illustration-bottom {
@@ -108,16 +155,23 @@ footer {
     .main-content h2 {
         font-size: 28px;
     }
-    .search-problem-box {
+    .chat-container {
         width: 100%;
         max-width: 90%;
+        height: 400px; /* Ajuste a altura para telas menores */
     }
-    header nav {
-        flex-direction: column;
-        align-items: center;
+
+    .chat-input-area {
+        padding: 10px;
     }
-    header nav a {
-        margin: 5px 0;
+
+    .chat-input-area input {
+        font-size: 14px;
+    }
+
+    .chat-input-area .button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
     .illustration-bottom {
         height: 200px;

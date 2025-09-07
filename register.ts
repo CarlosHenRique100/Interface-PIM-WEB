@@ -22,20 +22,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Basic validation
+        // Validate User ID contains only numbers
+        const userIdValue = userIdInput.value.trim();
+        if (!/^[0-9]+$/.test(userIdValue)) {
+            errorMessage.textContent = 'Não foi possível registrar a sua conta, tente incluir o seu ID do usuário sem LETRAS apenas NÚMEROS';
+            errorMessage.style.color = '#FF0000';
+            return;
+        }
+
         if (passwordInput.value !== confirmPasswordInput.value) {
             errorMessage.textContent = 'As senhas não coincidem. Por favor, tente novamente.';
-            errorMessage.style.color = '#ffdddd';
+            errorMessage.style.color = '#FF0000';
             return;
         }
 
         // In a real application, you would send this data to a server
+        const fullCorporateEmail = corporateEmailInput.value + '@uni.com';
         console.log('Dados de cadastro:', {
             userId: userIdInput.value,
             fullName: fullNameInput.value,
             phoneNumber: phoneNumberInput.value,
-            corporateEmail: corporateEmailInput.value,
+            corporateEmail: fullCorporateEmail,
             password: passwordInput.value
         });
+
+        // Salvar dados do usuário no localStorage
+        const userData = {
+            id: userIdInput.value,
+            phone: phoneNumberInput.value,
+            email: fullCorporateEmail,
+            password: passwordInput.value // Incluindo a senha no localStorage (ATENÇÃO: RISCO DE SEGURANÇA!)
+        };
+        localStorage.setItem('registeredUser', JSON.stringify(userData));
 
         errorMessage.textContent = 'Cadastro realizado com sucesso! Redirecionando para o login...';
         errorMessage.style.color = '#d4edda';
