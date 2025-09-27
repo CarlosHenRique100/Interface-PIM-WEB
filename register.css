@@ -89,3 +89,31 @@
         width: 100%;
     }
 }
+
+.corporate-email-input {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0f2ff;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.corporate-email-input input {
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 16px;
+    flex-grow: 1;
+    background-color: #e0f2ff;
+    color: #333;
+}
+
+.corporate-email-input span {
+    padding: 12px 10px;
+    background-color: #e0f2ff;
+    color: #495057;
+    font-size: 16px;
+    white-space: nowrap;
+}

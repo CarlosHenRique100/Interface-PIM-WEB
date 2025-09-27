@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         // Admin credentials (fixed)
-        var adminUsername = 'ADM@unimanagement';
+        var adminUsername = 'ADM';
         var adminPassword = 'adm123';
         // Registered user credentials (from localStorage)
         var storedUserData = localStorage.getItem('registeredUser');

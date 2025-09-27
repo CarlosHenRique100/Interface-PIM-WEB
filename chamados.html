@@ -13,21 +13,37 @@
             <img src="logo.png" alt="UNI MANAGEMENT Logo" class="company-logo">
         </div>
         <nav>
-            <a href="index.html">Tela inicial</a>
+            
             <a href="#">Ajuda</a>
-            <a href="#">Localizar chamado <span class="search-icon">🔍</span></a>
+            <a href="#" id="findCallLink">Localizar chamado <span class="search-icon">🔍</span></a>
             <a href="#" class="login-button">Login</a>
         </nav>
     </header>
 
     <main>
-        <div class="accessibility-button">
-            <img src="hand-icon.png" alt="Botão de Acessibilidade">
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
         </div>
         <div class="main-content">
             <h2>Olá! Eu sou sua assistente virtual. Como posso te ajudar hoje?</h2>
             <div class="chat-container">
                 <div class="chat-box" id="chatBox"></div>
+                <div id="confirmationButtons" style="display: none; text-align: center; margin-top: 10px;">
+                    <button id="confirmDataButton" class="button">Confirmar</button>
+                    <button id="editDataButton" class="button">Editar Dados</button>
+                </div>
+                <div id="resolutionButtons" style="display: none; text-align: center; margin-top: 10px;">
+                    <p>O problema foi resolvido?</p>
+                    <button id="yesButton" class="button">Sim</button>
+                    <button id="noButton" class="button">Não</button>
+                </div>
+                <div id="searchCallArea" class="chat-input-area" style="display: none; margin-top: 10px;">
+                    <input type="text" id="searchCallInput" placeholder="Digite o número do chamado...">
+                    <button id="searchCallButton" class="button">Buscar</button>
+                </div>
                 <div class="chat-input-area">
                     <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
                     <button id="sendMessageButton" class="button">Enviar</button>
@@ -67,5 +83,9 @@
     </footer>
 
     <script src="chamados.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>

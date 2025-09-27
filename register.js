@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         // In a real application, you would send this data to a server
-        var fullCorporateEmail = corporateEmailInput.value + '@uni.com';
+        var fullCorporateEmail = corporateEmailInput.value + '@unimanagement.com';
         console.log('Dados de cadastro:', {
             userId: userIdInput.value,
             fullName: fullNameInput.value,
